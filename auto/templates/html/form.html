@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Заказ</title>
+</head>
+<body>
+{% if add_success %}
+<p>Add new</p>
+{% endif %}
+
+<form name="onl" method = "post" action="{% url 'form' %}">
+	{% csrf_token %}
+	<input type="date" name="data" value="2016-03-06" required/>
+	<br />
+	<br />
+	<select name="city" required/>
+	    <option value="Запорожье">Запорожье</option>
+	    <option value="Днепропетровск">Днепропетровск</option>
+	</select>
+	<br />
+	<br />
+	<select name="from" size="1" title="Выберите с какой остановки Вас забрать" required/>
+	    <option value="Запорожье">АТК</option>
+	    <option value="Днепропетровск">Малиновского</option>
+	    <option value="Днепропетровск">Советская</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	</select>
+	<br />
+	<br />
+	<input type="number" name="numb" required/>
+	<br />
+	<br />
+	<input type="text" name="full_name" required/>
+	<br />
+	<br />
+	<input placeholder='+38 () 654-32-10'
+		   pattern="+3([0-9]{3})[0-9]{3}-[0-9]{2}-[0-9]{2}" 
+		   type="tel" id="tel" name="tel" required/>
+	<br />
+	<br />
+	<select name="city" required/>
+	    <option value="Запорожье">Запорожье</option>
+	    <option value="Днепропетровск">Днепропетровск</option>
+	</select>
+	<br />
+	<br />
+	<select name="to" size="1" title="Выберите с какой остановки Вас забрать" required/>
+	    <option value="Запорожье">АТК</option>
+	    <option value="Днепропетровск">Малиновского</option>
+	    <option value="Днепропетровск">Советская</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	    <option value="Днепропетровск">Анголенко</option>
+	    <option value="Днепропетровск">Автовокзал</option>
+	</select>
+	<br />
+	<br />
+	<textarea name="note" placeholder="примечание" style="inptext" required="">
+    </textarea>
+	<br />
+	<input type="submit" value="Заказать">
+</form>
+
+</body>
+</html>

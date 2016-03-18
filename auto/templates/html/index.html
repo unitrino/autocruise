@@ -1,0 +1,16 @@
+<!doctype html>
+<head>
+<title> autocruise </title>
+</head>
+<body>
+<table width = "90%" id = "rezz">
+    {% for data in data_from_db %}
+  <tr>
+    {% for elem in data %}
+            <td>{{ elem }}</td>
+    {% endfor %}
+  </tr>
+        {% endfor %}
+</table>
+</body>
+</html>

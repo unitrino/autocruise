@@ -1,0 +1,15 @@
+<!doctype html>
+<head>
+<title> autocruise </title>
+</head>
+<body>
+{% if errors %}
+    {{errors}}
+{% endif %}
+<form method="post" action = "/login/">
+    {% csrf_token %}
+    <input type="password" name = "password">
+    <input type="submit" value = "Log in">
+</form>
+</body>
+</html>
